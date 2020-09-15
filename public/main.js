@@ -4,7 +4,7 @@ const clientSecret = '0FOB2OGBDOU4MUOT2PM4E0MDWVPECYOALPYT0PKO4FYW5P1F';
 const url = '';
 
 // OpenWeather Info
-const openWeatherKey = '';
+const openWeatherKey = '8387c1d42ca5ca7e1f30a03217438028';
 const weatherUrl = '';
 
 // Page Elements
