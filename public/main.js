@@ -1,6 +1,6 @@
 // Foursquare API Info
-const clientId = '';
-const clientSecret = '';
+const clientId = 'B0I5NZFC0I1GWZ3XCWJGNFHDL2BTVJCCYRW3PZFMROML43XS';
+const clientSecret = '0FOB2OGBDOU4MUOT2PM4E0MDWVPECYOALPYT0PKO4FYW5P1F';
 const url = '';
 
 // OpenWeather Info
