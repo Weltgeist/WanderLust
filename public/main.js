@@ -23,6 +23,9 @@ const getVenues = async () => {
   const urlToFetch = `${url}${city}&limit=${limit}&client_id=${clientId}&client_secret=${clientSecret}&v=20200914`;
   try {
     const response = await fetch(urlToFetch);
+    if(response.ok){
+      console.log(response);
+    }
   } catch (error) {
     console.log(error);
   }
