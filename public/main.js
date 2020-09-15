@@ -21,6 +21,7 @@ const getVenues = async () => {
   const city = $input.val();
   const limit = '10';
   const urlToFetch = `${url}${city}&limit=${limit}&client_id=${clientId}&client_secret=${clientSecret}&v=20200914`;
+  console.log(urlToFetch);
   try {
     const response = await fetch(urlToFetch);
     if(response.ok){
