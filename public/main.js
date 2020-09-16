@@ -28,6 +28,9 @@ const getVenues = async () => {
       console.log(response);
       const jsonResponse = await response.json();
       console.log(jsonResponse);
+      //Save
+      const venues = jsonResponse.response.groups[0].items;
+      console.log(venues);
     }
   } catch (error) {
     console.log(error);
