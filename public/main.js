@@ -38,7 +38,12 @@ const getVenues = async () => {
   }
 }
 
-const getForecast = () => {
+const getForecast = async () => {
+  try {
+    
+  } catch (error) {
+    console.log(error);
+  }
 
 }
 
