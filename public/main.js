@@ -63,6 +63,11 @@ const renderVenues = (venues) => {
     // Add your code here:
 
     let venueContent = '';
+    const venue = venues[index];
+    const name = venue.name ;
+    const iconSource = venue.categories[0].icon ;
+    const location = venue.location;
+    venueContent = createVenueHTML(name,location,iconSource);
     $venue.append(venueContent);
   });
   $destination.append(`<h2>${venues[0].location.city}</h2>`);
