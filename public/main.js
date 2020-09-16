@@ -41,6 +41,7 @@ const getVenues = async () => {
 const getForecast = async () => {
   const city = $input.val();
   const urlToFetch = `${weatherUrl}?q=${city}&appid=${openWeatherKey}`;
+  console.log(urlToFetch);
   try {
     const response = await fetch(urlToFetch);    
     if(response.ok){
