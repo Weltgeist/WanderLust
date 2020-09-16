@@ -66,8 +66,9 @@ const renderVenues = (venues) => {
     const venue = venues[index];
     const name = venue.name ;
     const iconSource = venue.categories[0].icon ;
+    const venueImg = iconSource.prefix + 'bg_64' + iconSource.suffix //bg_64 comme from 4square API info.
     const location = venue.location;
-    venueContent = createVenueHTML(name,location,iconSource);
+    venueContent = createVenueHTML(name,location,venueImg);
     $venue.append(venueContent);
   });
   $destination.append(`<h2>${venues[0].location.city}</h2>`);
