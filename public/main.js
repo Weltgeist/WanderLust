@@ -48,6 +48,7 @@ const getForecast = async () => {
       console.log(response);
       const jsonResponse = await response.json();
       console.log(jsonResponse);
+      return jsonResponse;
     }
   } catch (error) {
     console.log(error);
