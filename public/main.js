@@ -29,7 +29,7 @@ const getVenues = async () => {
       const jsonResponse = await response.json();
       console.log(jsonResponse);
       //Save
-      const venues = jsonResponse.response.groups[0].items;
+      const venues = jsonResponse.response.groups[0].items.map(parameter => parameter.venue);
       console.log(venues);
     }
   } catch (error) {
