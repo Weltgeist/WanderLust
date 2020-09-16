@@ -26,6 +26,8 @@ const getVenues = async () => {
     const response = await fetch(urlToFetch);
     if(response.ok){
       console.log(response);
+      const jsonResponse = await response.json();
+      console.log(jsonResponse);
     }
   } catch (error) {
     console.log(error);
