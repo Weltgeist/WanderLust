@@ -31,6 +31,7 @@ const getVenues = async () => {
       //Save
       const venues = jsonResponse.response.groups[0].items.map(parameter => parameter.venue);
       console.log(venues);
+      return venues;
     }
   } catch (error) {
     console.log(error);
