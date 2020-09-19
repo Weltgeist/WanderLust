@@ -59,11 +59,36 @@ const getForecast = async () => {
 
 // Render functions
 const renderVenues = (venues) => {
-  $venueDivs.forEach(($venue, index) => {
+  $venueDivs.forEach(($venue, index, arr) => {
     // Add your code here:
     let randomIndex = Math.floor(Math.random()*venues.length);
+    let venueToCheck = venues[randomIndex];
+    //checks if already in use
+    let tested = 1;
+    let n = 0;
+    while (tested) {
+      tested = arr.findIndex( $venue => { 
+        let t=$venue.text().includes(venueToCheck.name); 
+        console.log(`HTML TEXT: ${$venue.text()}`);
+        console.log(`Venue to check: ${venueToCheck.name}`);
+        console.log(`VTC Match: ${t}`);
+        console.log(`ITERATION: ${n}`);
+        console.log(`Index checking: ${randomIndex}`);
+        return t;
+      } ) > -1;
+      console.log(`Tested: ${tested}`);
+      if (tested){
+        console.log("i enter")
+        randomIndex = Math.floor(Math.random()*venues.length);
+        venueToCheck = venues[randomIndex];
+      }
+      n+=1;
+      if (n>20){
+        tested = 0;
+      }
+    }
     let venueContent = '';
-    const venue = venues[randomIndex];
+    const venue = venueToCheck;
     const name = venue.name ;
     const iconSource = venue.categories[0].icon ;
     const venueImg = iconSource.prefix + 'bg_64' + iconSource.suffix ;//bg_64 comme from 4square API info.
