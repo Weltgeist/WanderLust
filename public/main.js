@@ -67,18 +67,8 @@ const renderVenues = (venues) => {
     let tested = 1;
     let n = 0;
     while (tested) {
-      tested = arr.findIndex( $venue => { 
-        let t=$venue.text().includes(venueToCheck.name); 
-        console.log(`HTML TEXT: ${$venue.text()}`);
-        console.log(`Venue to check: ${venueToCheck.name}`);
-        console.log(`VTC Match: ${t}`);
-        console.log(`ITERATION: ${n}`);
-        console.log(`Index checking: ${randomIndex}`);
-        return t;
-      } ) > -1;
-      console.log(`Tested: ${tested}`);
+      tested = arr.findIndex( $venue => $venue.text().includes(venueToCheck.name) ) > -1;
       if (tested){
-        console.log("i enter")
         randomIndex = Math.floor(Math.random()*venues.length);
         venueToCheck = venues[randomIndex];
       }
