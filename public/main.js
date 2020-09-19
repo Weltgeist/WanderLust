@@ -61,9 +61,9 @@ const getForecast = async () => {
 const renderVenues = (venues) => {
   $venueDivs.forEach(($venue, index) => {
     // Add your code here:
-
+    let randomIndex = Math.floor(Math.random()*venues.length);
     let venueContent = '';
-    const venue = venues[index];
+    const venue = venues[randomIndex];
     const name = venue.name ;
     const iconSource = venue.categories[0].icon ;
     const venueImg = iconSource.prefix + 'bg_64' + iconSource.suffix ;//bg_64 comme from 4square API info.
