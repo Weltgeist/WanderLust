@@ -19,3 +19,4 @@ const createWeatherHTML = (currentDay) => {
 
 const kelvinToFahrenheit = k => ((k - 273.15) * 9 / 5 + 32).toFixed(0);
 const kelvinToCelcius = k => (k - 273.15).toFixed(0);
+const CelciusToFahrenheit = c => (c * 9 / 5 + 32).toFixed(0);
