@@ -10,7 +10,7 @@ const createVenueHTML = (name, location, iconSource) => {
 const createWeatherHTML = (currentDay) => {
   console.log(currentDay)
   return `<h2>${weekDays[(new Date()).getDay()]}</h2>
-		<h2>Temperature: ${kelvinToFahrenheit(currentDay.main.temp)}&deg;F</h2>
+		<h2>Temperature: ${kelvinToCelcius(currentDay.main.temp)}&deg;F</h2>
 		<h2>Humidity: ${(currentDay.main.humidity)}%</h2>
 		<h2>Wind Speed: ${(currentDay.wind.speed)}m/s</h2>
 		<h2>Condition: ${currentDay.weather[0].description}</h2>
@@ -18,3 +18,4 @@ const createWeatherHTML = (currentDay) => {
 }
 
 const kelvinToFahrenheit = k => ((k - 273.15) * 9 / 5 + 32).toFixed(0);
+const kelvinToCelcius = k => (k - 273.15).toFixed(0);
